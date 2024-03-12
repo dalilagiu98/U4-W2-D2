@@ -1,8 +1,6 @@
 package exercise1;
 
-import java.util.HashSet;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
 
 public class Exercise1 {
     public static void main(String[] args) {
@@ -11,7 +9,7 @@ public class Exercise1 {
         int numberInserted = Integer.parseInt(scanner.nextLine());
         //I create a set of String type because of the content of the set
         Set<String> stringSet = new HashSet<>();
-        Set<String> stringSetDuplicate = new HashSet<>();
+        List<String> stringSetDuplicate = new ArrayList<>();
 
         if(numberInserted > 0) {
 
