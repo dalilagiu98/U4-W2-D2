@@ -13,19 +13,26 @@ public class Exercise1 {
         Set<String> stringSet = new HashSet<>();
         Set<String> stringSetDuplicate = new HashSet<>();
 
-        for (int i = 0; i < numberInserted; i++ ) {
-            System.out.println("Please, insert your " + (i + 1) + " word");
-            String stringInserted = scanner.nextLine();
-            if( stringSet.add(stringInserted)) {
-                stringSet.add(stringInserted);
-            } else {
-                stringSetDuplicate.add(stringInserted);
+        if(numberInserted > 0) {
+
+            for (int i = 0; i < numberInserted; i++) {
+                System.out.println("Please, insert your " + (i + 1) + " word");
+                String stringInserted = scanner.nextLine();
+                if (stringSet.add(stringInserted)) {
+                    stringSet.add(stringInserted);
+                } else {
+                    stringSetDuplicate.add(stringInserted);
+                }
+
             }
 
-        }
+            System.out.println("The words you have inserted are: " + stringSet);
+            System.out.println("The number of words you have inserted is: " + stringSet.size());
+            System.out.println("The duplicate are: " + stringSetDuplicate);
+            scanner.close();
 
-        System.out.println("The words you have inserted are: " + stringSet);
-        System.out.println("The number of words you have inserted is: " + stringSet.size());
-        System.out.println("The duplicate are: " + stringSetDuplicate);
+        } else {
+            System.err.println("Insert a number greater than zero!");
+        }
     }
 }
